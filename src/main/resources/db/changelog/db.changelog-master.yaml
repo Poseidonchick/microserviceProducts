@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-lesson1.yaml
+  - changeSet:
+      id: create-table-products
+        author: liquibase
+        changes:
+          - createTable:
+              tableName: products
+              columns:
+                - column:
+                    name: id
+                    type: UUID
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: name
+                    type: varchar(25)
+                    constraints:
+                      unique: false
+                      nullable: false
+                - column:
+                    name: summ
+                    type: varchar(25)
+                    constraints:
+                      unique: false
+                      nullable: false
+                - column:
+                    name: percent
+                    type: varchar(50)
+                    constraints:
+                      unique: false
+                      nullable: false
+                - column:
+                    name: date_created
+                    type: DATETIME
+                    constraints:
+                      unique: false
+                      nullable: true
+                - column:
+                    name: date_updated
+                    type: DATETIME
+                    constraints:
+                      unique: false
+                      nullable: true
+                - column:
+                    name: date_deleted
+                    type: DATETIME
+                    constraints:
+                      unique: false
+                      nullable: true
