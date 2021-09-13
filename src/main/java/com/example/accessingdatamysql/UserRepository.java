@@ -2,6 +2,6 @@ package com.example.accessingdatamysql;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<RuleTable, Integer> {
+public interface UserRepository extends CrudRepository<Products, Integer> {
 
 }
